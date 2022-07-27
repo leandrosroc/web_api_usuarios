@@ -15,7 +15,7 @@ usuariosDados = {
     }
 }
 
-def usuariosResposta():
+def todosUsuarios():
     return {"usuarios": list(usuariosDados.values())}
 
 @app.route("/")
@@ -24,7 +24,7 @@ def root():
 
 @app.route("/usuarios")
 def listarUsuarios():
-    return usuariosResposta()
+    return todosUsuarios()
 
 #buscar por um usuário
 @app.route("/usuarios/<int:usuarioId>")
